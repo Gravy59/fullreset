@@ -1,0 +1,27 @@
+{
+  "name": "fullreset",
+  "version": "0.1.0",
+  "description": "A concise css file that is Blatently stolen from Tailwind CSS Preflight and modern-normalize.",
+  "main": "dist/fullreset.css",
+  "style": "dist/fullreset.css",
+  "files": [
+    "dist/fullreset.css"
+  ],
+  "scripts": {
+    "build:dev": "pnpm lightningcss -m basestyles.css -o build/basestyles.css --targets '>=1%' && pnpm lightningcss -m fullreset.css -o build/fullreset.css --targets '>=1%'",
+    "build:prod": "mkdir -p dist && pnpm lightningcss -m fullreset.css -o dist/fullreset.css --targets '>=1%'"
+  },
+  "keywords": [
+    "normalize",
+    "css",
+    "reset",
+    "browser",
+    "style"
+  ],
+  "author": "Gravy59",
+  "license": "MIT",
+  "devDependencies": {
+    "lightningcss": "^1.19.0",
+    "lightningcss-cli": "^1.19.0"
+  }
+}

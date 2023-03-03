@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Fullreset CSS Test</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="build/fullreset.css" rel="stylesheet" />
+    <link href="build/basestyles.css" rel="stylesheet" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </head>
+  <body x-data="{ baseStyles: false }">
+    <div :class="baseStyles && 'baseStyles'">
+      <pre>The following is taken from <a href="http://www.mit.edu/people/warlord/pgp-class/pgp-works.html">MIT.edu</a></pre>
+      <button x-on:click="baseStyles = !baseStyles" type="button">
+        Base styles
+      </button>
+      <h1>How PGP Works</h1>
+      <p>Major parts of PGP</p>
+      <ul>
+        <li>
+          <a href="keys.html">Keys</a>
+          <ul>
+            <li>Users create their own Public/Private keypairs</li>
+            <li>Users can have multiple keys</li>
+            <li>Users maintain a keyring of cached public keys</li>
+          </ul>
+        </li>
+        <li>
+          <a href="messages.html">Messages</a>
+          <ul>
+            <li>Encrypt messages to people "using their Public Key"</li>
+            <li>Sign messages using your Private Key</li>
+            <li>Decrypt/Verify messages</li>
+          </ul>
+        </li>
+        <li>
+          <a href="keymgmt.html">Key Management</a>
+          <ul>
+            <li>Add/remove keys from the keyring</li>
+            <li>Sign a key</li>
+            <li>Extract public keys to send to others (exchange keys)</li>
+            <li>Fingerprint keys (to help verify keys)</li>
+          </ul>
+        </li>
+      </ul>
+      <p>Keyservers:</p>
+      <ul>
+        <li>A way to exchange PGP Public Keys</li>
+        <li>
+          Email Interface: Send mail to <tt>pgp-public-keys@pgp.mit.edu</tt>
+        </li>
+        <li>
+          For more information, there read the
+          <a href="http://pgp.iastate.edu/pgp/keyserver-help.html"
+            >Keyserver Help File</a
+          >
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
